@@ -1,4 +1,4 @@
-{% set version = "5.12.3" %}
+{% set version = "5.12.1" %}
 
 package:
   name: pyqt_split
@@ -6,13 +6,13 @@ package:
 
 source:
   - url: https://distfiles.macports.org/py-pyqt5/PyQt5_gpl-{{ version }}.tar.gz
-    sha1: f442a876794947a24474cf85eb02abd60f00f642
+    sha1: 9677d7148ccee1dc7169c1321d3b4e84062d053e
     patches:
       - 0003-configure.patch
       # remove build path from .bat
       - 0004-configure-winbat.patch  # [win]
-      - py2_segfault.diff
-      - qt5_dll.diff
+      #- py2_segfault.diff
+      #- qt5_dll.diff
     folder: pyqt5
 
   - url: https://distfiles.macports.org/py-sip/sip-4.19.18.tar.gz
